@@ -354,7 +354,65 @@ html, body {
     #video-container {
         margin-top: 3vw;
     }
+
+    #video-container .container1 h2{
+        font-size: 3.1vw;
+        color: #fff;
+    }
+    
+    #video-container .container1 h3{
+        font-size: 2.9vw;
+        color: #fff;
+    }
+    
+    #video-container .container1 a button{
+        font-size: 3.1vw;
+        padding: 10px 28px;
+    }
 }
+
+
+
+
+@media (max-width: 390px) {
+
+    #home-div {
+        height: 250px;
+        width: 400px;
+        margin-top: 22vw;
+        margin-left: 105vw;
+    }
+
+    #page1 {
+        min-height: 70vh;
+        width: 250vw;
+    }
+
+    #page1 h1 {
+        font-size: 15vw;
+        letter-spacing: -5px;
+    }
+
+    #video-container {
+        margin-top: 3vw;
+    }
+
+    #video-container .container1 h2{
+        font-size: 3.6vw;
+        color: #fff;
+    }
+    
+    #video-container .container1 h3{
+        font-size: 3.4vw;
+        color: #fff;
+    }
+    
+    #video-container .container1 a button{
+        font-size: 3.9vw;
+        padding: 10px 28px;
+    }
+}
+
 
 
 #page2 {
@@ -435,6 +493,22 @@ html, body {
         height: 80vh;
         width: 215vw;
         margin-top: -2vw;
+    }
+
+    #page2 .elem #dets a{
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 390px) {
+    #page2 {
+        height: 90vh;
+        width: 250vw;
+        margin-top: -2vw;
+    }
+
+    #page2 .elem #dets a{
+        font-size: 4.1vw;
     }
 }
 
@@ -559,7 +633,33 @@ html, body {
     }
 
     #page3 .child #dets a {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 390px) {
+    #page3 {
+        width: 250vw;
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+
+    #page3 #caption {
+        width: 99%;
+    }
+
+    #page3 #caption h2{
+        font-size: 12vw;
+        letter-spacing: -1px;
+    }
+
+    #page3 .child {
+        height: 70vh;
+        width: 98%;
+    }
+
+    #page3 .child #dets a {
+        font-size: 4.1vw;
     }
 }
 
@@ -842,6 +942,60 @@ html, body {
 
     #page4-inner #page4-end a{
         font-size: 2.9vw;
+    }
+
+}
+
+
+@media (max-width: 390px) {
+    #page4 {
+        height: 55vh;
+        width: 250vw;
+    }
+
+    #page4-inner #inner-up .inner-box1 h2 {
+        font-size: 3.4vw;
+    }
+
+    #page4-inner #inner-up .inner-box1 a {
+        font-size: 3.2vw;
+    }
+
+    #page4-inner #inner-up .inner-box2 h2 {
+        font-size: 3.4vw;
+    }
+
+    #page4-inner #inner-up .inner-box2 a{
+        font-size: 3.2vw;
+    }
+
+    #page4-inner #inner-up .inner-box3 h2 {
+        font-size: 3.4vw;
+    }
+
+    #page4-inner #inner-up .inner-box3 a {
+        font-size: 3.2vw;
+    }
+
+    #page4-inner #page4-mid {
+        height: 450px;
+        width: 60%;
+    }
+
+    #page4-bottom #section h2 {
+        font-size: 3.4vw;
+    }
+
+    #page4-bottom #section a {
+        font-size: 3.2vw;
+    }
+
+    #page4-inner #page4-end h2 {
+        font-size: 3.4vw;
+    }
+
+    #page4-inner #page4-end a{
+        font-size: 3.2vw;
     }
 
 }
