@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %} Your cart {% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+{% endblock styles %}
+
+
+{% block body %}
+<div id="main">
+    <div id="page1">
+        <h1>Your Cart</h1>
+
+           <!-- Flash Message Display -->
+           {% with messages = get_flashed_messages(with_categories=true) %}
+           {% if messages %}
+               <ul>
+                   {% for category, message in messages %}
+                       <li class="{{ category }}">{{ message }}</li>
+                   {% endfor %}
+               </ul>
+           {% endif %}
+           {% endwith %}
+    
+        {% if cart_items %}
+            <div id="cart-items">
+                {% for item in cart_items %}
+                    <div class="cart-item">
+                        <img src="{{ item.image }}" alt="{{ item.name }}">
+                        <div class="cart-txt">
+                            <h3>{{ item.name }}</h3>
+                            <p>{{ item.price }}</p>
+                            <p>Quantity: {{ item.quantity }}</p>
+                            <button class="remove-from-cart" data-index="{{ loop.index0 }}">Remove</button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <h2>Total Price: ${{ total_price }}</h2>
+    
+            <div id="orders">
+                   <!-- Add 'Make Order' button -->
+            <form action="{{ url_for('place_order') }}" method="POST">
+                <button type="submit" class="order-btn">Make Order</button>
+            </form>
+
+            <!-- Make Order Button (Below Total Price) -->
+            {% if order %}
+            <form action="{{ url_for('cancel_order', order_id=order.id) }}" method="POST">
+                <button type="submit" class="cancel-btn">Cancel Order</button>
+            </form>
+            {% endif %}
+
+            <form action="{{ url_for('clear_cart') }}" method="POST">
+                <button type="submit" class="clear-btn">Clear Cart</button>
+            </form>            
+
+            </div>
+
+        {% else %}
+            <p>Your cart is empty. Please shop some items!</p>
+        {% endif %}
+
+    </div>
+
+    
+ <div id="page2"></div>
+
+</div>    
+{% endblock body %}
+
+
+
+{% block script %}
+    <script src="{{ url_for('static', filename='cart.js') }}"></script>
+{% endblock script %}

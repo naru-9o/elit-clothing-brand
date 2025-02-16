@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block title %} Contact us {% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+{% endblock styles %}
+
+
+{% block body %}
+<div id="main">
+    <div id="page1">
+        <div id="page-up">
+            <div id="inner">
+                <h2>Contact</h2>
+                <p>Eliie Client Service Center is available Monday to Friday from 9AM to 7PM and Saturday to<br>
+                 Sunday from 10AM to 6PM<br>
+                 Our Client Advisors will be delighted to assist you and provide personalized advice</p>
+            </div>
+        </div>
+        <div id="page-down">
+            <div id="inner-down">
+                <h2>Call us</h2>
+                <h3>Our Client Advisors would be delighted to assist you</h3>
+                <h3>You may contact us at +44 (0)207 172 0172</h3>
+                <p>Service available from Monday to Friday from 9AM to 7PM and<br>
+                 Saturday to Sunday from 10AM to 6PM.</p>
+                <p>Please note, we are closed on 25th of December & 1st of January.<br>
+                 We will offer reduced opening hours on 24th of December and 31st of<br>December.</p>
+            </div>
+            <div id="inner-down">
+                <h2>Instant messaging</h2>
+                <h3>Would you like to contact us on an instant messaging app?</h3>
+                <h3>Our Client Advisors will be delighted to assist you.</h3>
+                <h3>By clicking below you confirm you have read the Privacy<br>Statement</h3>
+                <a href="#"><button>WhatsApp</button></a>
+            </div>
+            <div id="inner-down">
+                <h2>Chat online</h2>
+                <h3>Looking for personalized advice?</h3>
+                <h3>The option to chat becomes active when one of our Client<br>Advisors is available.</h3>
+                <h3>By clicking below you confirm you have read the Privacy <br>Statement</h3>
+                <a href="#"><button>ask your question</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="page2">
+        <div id="page-up">
+            <div id="inner">
+                <h2>About</h2>
+                <p>At Eliie, we combine expert craftsmanship with personalized service to offer a truly<br>
+                luxurious fashion experience. Whether you're seeking exclusive style advice or tailored design solutions,<br> 
+                our Client Advisors are dedicated to helping you curate timeless, elegant pieces that reflect<br>
+                your unique sense of fashion</p>
+            </div>
+        </div>
+        <div id="page-down">
+            <div id="inner-down">
+                <img src="{{ url_for('static', filename='images/about-img.avif') }}" alt="product-image" />
+                <div id="dets" ><a href="/Mstore">Women's Fashion</a></div>
+            </div>
+            <div id="inner-down">
+                <img src="{{ url_for('static', filename='images/about-img1.avif') }}" alt="product-image" />
+                <div id="dets" ><a href="/Mstore">Men's Fashion</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="page3">
+        <div id="page-up">
+            <div id="inner">
+                <h2>Signature Packaging</h2>
+                <p>Carefully crafted to celebrate the magic of shared moments, Eliie gift sets honor the most<br>
+                tender of attentions, paying tribute to the art of giving and delighting that is at the heart of the<br>
+                Eliie dream.</p>
+            </div>
+        </div>
+        <div id="page-down">
+            <div id="inner-down">
+                <img src="{{ url_for('static', filename='images/about-img2.webp') }}" alt="product-image" />
+            </div>
+            <div id="inner-down">
+                <img src="{{ url_for('static', filename='images/about-img3.jpg') }}" alt="product-image" />
+            </div>
+            <div id="inner-down">
+                <img src="{{ url_for('static', filename='images/about-img4.webp') }}" alt="product-image" />
+            </div>
+        </div>
+    </div>
+    <div id="page4">
+        <div id="page-up">
+            <div id="inner">
+                <h2>Delivery & returns</h2>
+            </div>
+        </div>
+        <div id="page-down">
+            <div id="inner-down">
+                <h2>In-Store appointment</h2>
+                <h3>Eliie invites you to arrange an appointment with a Sales<br>Associate for a personal consultation</h3>
+                <a href="#"><button>Book An Appointment</button></a>
+            </div>
+            <div id="inner-down">
+                <h2>Your order</h2>
+                <h3>Check the contents of your order, track its status, or request<br>an exchange or refund.</h3>
+                <h3>If you already have an account please log in to your account.</h3>
+                <a href="#"><button>Confirm</button></a>
+            </div>
+            <div id="inner-down">
+                <h2>FREE DELIVERY</h2>
+                <h3>Eliie offers several secure delivery methods :</h3>
+                <h3>- Standard delivery (3-4 working days): free</h3>
+                <h3>- Express delivery (1-2 working days): £7 (free for any<br> purchase over £1300)</h3>
+                <h3>Delivery timing is estimated from the time your order is shipped.</h3>
+            </div>
+        </div>
+    </div>
+    <div id="page5">
+        <div id="page5-inner">
+           <div id="inner-up">
+            <div class="inner-box1">
+                <h2>Personalized Message</h2>
+                <a href="/about"><p>Add a personal touch to make your order a truly unique gift</p></a>
+                <div class="inner-icon">
+                    <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="inner-box2">
+                <h2>Signature Packaging</h2>
+                <a href="/about"><p>where every layer reveals something extraordinary.</p></a>
+                <div class="inner-icon">
+                    <a href="about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="inner-box3">
+                <h2>Free Delivery & Returns</h2>
+                <a href="/about"><p>Within 3 days delivery and returns & exchange within 7 days</p></a>
+                <div class="inner-icon">
+                    <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+           </div>
+           <div id="page5-mid">
+                <video src="{{ url_for('static', filename='videos/footer-video.mp4') }}" autoplay loop muted></video>
+           </div>
+           <div id="page5-bottom">
+            <div id="section">
+                <h2>About Us</h2>
+                <a href="/about">Products</a>
+                <a href="/about">Shippment</a>
+            </div>
+            <div id="section">
+                <h2>Client Services</h2>
+                <a href="/about">contact</a>
+                <a href="/about">FAQ</a>
+            </div>
+            <div id="section">
+                <h2>Legal Terms</h2>
+                <a href="/about">Legal Terms</a>
+                <a href="/about">Privact Notice</a>
+            </div>
+           </div>
+           <div id="page5-end">
+            <h2>Follow us</h2>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <h2>&copy; 2024 Eliie. All Rights Reserved. Unauthorized reproduction or distribution of any material from this site is strictly prohibited.</h2>
+
+           </div>
+        </div>
+    </div>
+</div>
+    
+
+
+{% endblock body %}
+
+
+{% block script %}
+    <script src="{{ url_for('static', filename='about.js') }}"></script>
+{% endblock script %}

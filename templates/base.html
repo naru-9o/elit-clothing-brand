@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock title %}-landing page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% block styles %}
+    
+    {% endblock styles %}
+</head>
+<body>
+    <div id="nav">
+      <div id="nav-left">
+        <img src="{{ url_for('static', filename='images/nav-logo2.webp') }}" alt="" />
+      </div>
+        <div id="nav-right">
+          <div id="nav-icons">
+            <a href="/home">HOME</a>
+            <a href="/about">CONTACT US</a>
+            <a href="/logout">LOG OUT</a>
+          </div>
+          <div id="nav-links">
+            <a href="#" id="menu-toggle"><i class="fa-solid fa-bars"></i></a>
+            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar">
+        <button id="close-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+        <div class="side-content">
+          <img src="{{ url_for('static', filename='images/sidebar-img.avif') }}" alt="" />
+          <div id="dets" ><a href="/Mstore">Men's Fashion</a></div>
+        </div>
+        <div class="sidebar-content">
+          <img src="{{ url_for('static', filename='images/sidebar-img2.jpg') }}" alt="" />
+          <div id="dets">J'adore l'Or</div>
+      </div>
+        <div class="side-content">
+          <img src="{{ url_for('static', filename='images/sidebar-img1.avif') }}" alt="" />
+          <div id="dets" ><a href="/wstore">Women's Fashion</a></div>
+        </div>
+        <div class="sidebar-content"></div>
+    </div>
+     {% block body %}
+    
+     {% endblock body %}
+
+
+      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+      {% block script %}
+        
+      {% endblock script %}
+    </body>
+</html>

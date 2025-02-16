@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div id="main">
+    <div class="about"></div>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <input type="email" required name="email" id="email">
+                <label for="email">Email</label>
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+    
+            <div class="form-group">
+                <input type="password" required name="password" id="pwd">
+                <label for="pwd">Password</label>
+                <i class="fa-regular fa-eye"></i>
+            </div>
+            <input id="btn" type="submit" value="Login">
+        </form>
+      </div>
+  </div>
+
+</body>
+</html>

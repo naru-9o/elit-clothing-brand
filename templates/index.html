@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock styles %}
+
+{% block body %}
+
+      <div id="cursor"></div>
+      <div id="main">
+        <div id="home-div">
+            <video src="{{ url_for('static', filename='videos/home-video.mp4') }}" autoplay loop muted></video>
+        </div>
+        <div id="page1">
+          <h1>ELEVATE</h1>
+          <h1>YOUR STYLE</h1>
+          <div id="video-container">
+            <video src="{{ url_for('static', filename='videos/video1.mp4') }}" autoplay loop muted></video>
+            <div class="container1">
+                <h2>"Crafted for the Few, Admired by All"</h2>
+                <h3> Every stitch, every detail is crafted to perfection</h3>
+                <a href="/Women-shop"><button>Discover More</button></a>
+            </div>
+          </div>
+        </div>
+        <div id="page2">
+            <div id="elem1" class="elem">
+              <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/men-img.avif') }}" alt="" />
+              <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Men-shop">Men's Collection</a></div>
+            </div>            
+          <div id="elem2" class="elem">
+            <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/woman.avif') }}" alt="" />
+            <div data-scroll data-scroll-speed="-1" id="dets" class="dets2"><a href="/Women-shop">Women's Collection</a></div>
+          </div>
+          <div id="elem3" class="elem">
+            <img data-scroll data-scroll-speed="1" src="{{ url_for('static', filename='images/winter.avif') }}" alt="" />
+            <div data-scroll data-scroll-speed="-1" id="dets" class="dets3"><a href="/Men-shop">Winter Collection</a></div>
+          </div>
+        </div>
+        <div id="page3">
+            <div id="caption">
+                <h2 data-scroll data-scroll-speed="-.8" >LATEST COLLECTION</h2>
+            </div>
+            <div class="child" id="child1">
+                <img src="{{ url_for('static', filename='images/img1.avif') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Women-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            <div class="child" id="child2">
+                <img src="{{ url_for('static', filename='images/img2.avif') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Women-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            <div class="child" id="child3">
+                <img src="{{ url_for('static', filename='images/img3.avif') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Women-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            <div class="child" id="child4">
+                <img src="{{ url_for('static', filename='images/img4.avif') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Women-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div> 
+            <div class="child" id="child5">
+                <img src="{{ url_for('static', filename='images/img5.webp') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Men-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div>
+            <div class="child" id="child6">
+                <img src="{{ url_for('static', filename='images/img6.webp') }}" alt="" />
+                <div data-scroll data-scroll-speed="-1" id="dets" class="dets1"><a href="/Men-shop">Shop <i class="fa-solid fa-bag-shopping"></i></a></div>
+            </div>                
+        </div>
+        <div id="page4">
+            <div id="page4-inner">
+               <div id="inner-up">
+                <div class="inner-box1">
+                    <h2>Personalized Message</h2>
+                    <a href="/about"><p>Add a personal touch to make your order a truly unique gift</p></a>
+                    <div class="inner-icon">
+                        <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="inner-box2">
+                    <h2>Signature Packaging</h2>
+                    <a href="/about"><p>where every layer reveals something extraordinary.</p></a>
+                    <div class="inner-icon">
+                        <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="inner-box3">
+                    <h2>Free Delivery & Returns</h2>
+                    <a href="/about"><p>Within 3 days delivery and returns & exchange within 7 days</p></a>
+                    <div class="inner-icon">
+                        <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+               </div>
+               <div id="page4-mid">
+                    <video src="{{ url_for('static', filename='videos/footer-video.mp4') }}" autoplay loop muted></video>
+               </div>
+               <div id="page4-bottom">
+                <div id="section">
+                    <h2>About Us</h2>
+                    <a href="/about">Products</a>
+                    <a href="/about">Shippment</a>
+                </div>
+                <div id="section">
+                    <h2>Client Services</h2>
+                    <a href="/about">contact</a>
+                    <a href="/about">FAQ</a>
+                </div>
+                <div id="section">
+                    <h2>Legal Terms</h2>
+                    <a href="/about">Legal Terms</a>
+                    <a href="/about">Privact Notice</a>
+                </div>
+               </div>
+               <div id="page4-end">
+                <h2>Follow us</h2>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                <h2>&copy; 2024 Eliie. All Rights Reserved. Unauthorized reproduction or distribution of any material from this site is strictly prohibited.</h2>
+
+               </div>
+            </div>
+        </div>
+      </div>
+
+{% endblock body %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+{% endblock script %}
+
+

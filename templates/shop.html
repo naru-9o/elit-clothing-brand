@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block title %} Men's Designer Cloths {% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='shop.css') }}">
+{% endblock styles %}
+
+{% block body %}
+
+<div id="main">
+    <div id="page1">
+        <div id="vid-container">
+            <video src="{{ url_for('static', filename='videos/man-video1.mp4') }}" autoplay loop muted></video>
+        </div>
+        <div id="heading">
+            <h2>B44 blade</h2>
+            <a href="/Mstore">Discover the New Sneakers</a>
+        </div>
+    </div>
+    <div id="page2">
+        <h2>Punctuating the looks of the Lifestyle Capsule guest designed by Lewis<br>
+         Hamilton, the B44 Blade sneakers are characterized by their 2000s-inspired<br>
+        curves, accentuated by assertive volume.</h2>
+        <a href="/Mstore" class="underlined-link">Discover </a>
+    </div>
+    <div id="page3">
+        <div id="video-container">
+            <video src="{{ url_for('static', filename='videos/man-video.mp4') }}" autoplay loop muted></video>
+            <div id="vid-content">
+                <a href="/Mstore"><h2>Newest Arrivals</h2></a>
+                <a href="/Mstore">Discover</a>
+            </div>
+        </div>
+        <div class="content">
+            {% for product in products_page3 %}
+            <div class="cont1">
+                <div class="img1">
+                    <a href="{{ product.link }}">
+                        <img id="imag1" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.name }}" />
+                        <img id="imag2" src="{{ url_for('static', filename=product.image2) }}" alt="{{ product.name }}" />
+                    </a>
+                </div>
+                <div class="txt1">
+                    <h2>{{ product.name }}</h2>
+                    <h3>{{ product.description }}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="page4">
+        <div id="container">
+            {% for product in products_page4 %}
+            <div class="cont1">
+                <div class="img1">
+                    <a href="{{ product.link }}">
+                        <img id="imag1" src="{{ url_for('static', filename=product.image1) }}" alt="{{ product.name }}" />
+                        <img id="imag2" src="{{ url_for('static', filename=product.image2) }}" alt="{{ product.name }}" />
+                    </a>
+                </div>
+                <div class="txt1">
+                    <h2>{{ product.name }}</h2>
+                    <h3>{{ product.description }}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="page5">
+        <div id="page5-inner">
+           <div id="inner-up">
+            <div class="inner-box1">
+                <h2>Personalized Message</h2>
+                <a href="/about"><p>Add a personal touch to make your order a truly unique gift</p></a>
+                <div class="inner-icon">
+                    <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="inner-box2">
+                <h2>Signature Packaging</h2>
+                <a href="/about"><p>where every layer reveals something extraordinary.</p></a>
+                <div class="inner-icon">
+                    <a href="about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+            <div class="inner-box3">
+                <h2>Free Delivery & Returns</h2>
+                <a href="/about"><p>Within 3 days delivery and returns & exchange within 7 days</p></a>
+                <div class="inner-icon">
+                    <a href="/about"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+           </div>
+           <div id="page5-mid">
+                <video src="{{ url_for('static', filename='videos/footer-video.mp4') }}" autoplay loop muted></video>
+           </div>
+           <div id="page5-bottom">
+            <div id="section">
+                <h2>About Us</h2>
+                <a href="/about">Products</a>
+                <a href="/about">Shippment</a>
+            </div>
+            <div id="section">
+                <h2>Client Services</h2>
+                <a href="/about">contact</a>
+                <a href="/about">FAQ</a>
+            </div>
+            <div id="section">
+                <h2>Legal Terms</h2>
+                <a href="/about">Legal Terms</a>
+                <a href="/about">Privact Notice</a>
+            </div>
+           </div>
+           <div id="page5-end">
+            <h2>Follow us</h2>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <h2>&copy; 2024 GrootDesign. All Rights Reserved. Unauthorized reproduction or distribution of any material from this site is strictly prohibited.</h2>
+
+           </div>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock body %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='shop.js') }}"></script>
+{% endblock script %}
